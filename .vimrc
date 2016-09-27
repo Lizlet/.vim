@@ -13,13 +13,17 @@ call plug#end()
 if has("gui_running")
     set guifont=DroidSansMonoForPowerline\ Nerd\ Font
 endif
+" Sets a line each at he current row and column
 set cursorcolumn
 set cursorline
+" line numbering
 set number
+" tab settings, set to 4 spaces, and tabs to spaces.
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+" shows tabs and newlines.
 set listchars=tab:▸\ ,eol:¬
 set list
 
