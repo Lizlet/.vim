@@ -72,6 +72,10 @@ let g:NERDCompactSexyComs = 1
 " Allow commenting and inverting empty lines (useful when commenting a region)
 let g:NERDCommentEmptyLines = 1
 "===============================================================================
+"======= Emmet-vim Settings ======= 
+"===============================================================================
+let g:user_emmet_leader_key='<C-Z>'
+"===============================================================================
 "======= Key maps ======= 
 "===============================================================================
 map <C-n> :NERDTreeToggle<CR>
