@@ -10,6 +10,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 "===============================================================================
@@ -33,6 +34,9 @@ set listchars=tab:▸\ ,eol:¬
 set list
 " Sets the update time of vim
 set updatetime=250
+" Makes it so there will always, if possible, be, at least, 5 lines above or
+" below the cursor
+set scrolloff=5
 
 "===============================================================================
 "======= Colorscheme ======= 
