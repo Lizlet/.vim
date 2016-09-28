@@ -11,6 +11,12 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+    Plug 'zchee/deoplete-jedi'
+else
+    Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
+endif
 call plug#end()
 
 "===============================================================================
@@ -18,6 +24,9 @@ call plug#end()
 "===============================================================================
 if has("gui_running")
     set guifont=DroidSansMonoForPowerline\ Nerd\ Font
+endif
+if has('nvim')
+    let g:deoplete#enable_at_startup = 1
 endif
 " Sets a line each at he current row and column
 set cursorcolumn
