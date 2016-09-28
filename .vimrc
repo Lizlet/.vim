@@ -72,3 +72,16 @@ nnoremap <UP> <NOP>
 nnoremap <LEFT> <NOP>
 nnoremap <DOWN> <NOP>
 nnoremap <RIGHT> <NOP>
+nnoremap <leader>n :call NumberToggle()<cr>
+"===============================================================================
+"======= Functions ======= 
+"===============================================================================
+function! NumberToggle()
+    if(&relativenumber == 1)
+        set norelativenumber
+        set number
+    else
+        set nonumber
+        set relativenumber
+    endif
+endfunc
