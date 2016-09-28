@@ -3,11 +3,13 @@
 "===============================================================================
 call plug#begin()
 Plug 'tpope/vim-sensible'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'scrooloose/syntastic'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
-" Plug 'tpope/vim-fugitive' "git wrapper, check out if I ever need it.
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 "===============================================================================
@@ -29,6 +31,8 @@ set expandtab
 " shows tabs and newlines.
 set listchars=tab:▸\ ,eol:¬
 set list
+" Sets the update time of vim
+set updatetime=250
 
 "===============================================================================
 "======= Colorscheme ======= 
@@ -40,11 +44,23 @@ colorscheme monokai
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+"===============================================================================
+"======= NERDCommenter settings ======= 
+"===============================================================================
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+"===============================================================================
+"======= Key maps ======= 
+"===============================================================================
+map <C-n> :NERDTreeToggle<CR>
 "===============================================================================
 "======= Key remaps ======= 
 "===============================================================================
