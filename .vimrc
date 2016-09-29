@@ -82,10 +82,16 @@ map <C-n> :NERDTreeToggle<CR>
 "===============================================================================
 "======= Key remaps ======= 
 "===============================================================================
-nnoremap <UP> <NOP>
-nnoremap <LEFT> <NOP>
-nnoremap <DOWN> <NOP>
-nnoremap <RIGHT> <NOP>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
 nnoremap <leader>n :call NumberToggle()<cr>
 "===============================================================================
 "======= Functions ======= 
