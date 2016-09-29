@@ -92,6 +92,7 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
+nnoremap ; :
 nnoremap <leader>n :call NumberToggle()<cr>
 "===============================================================================
 "======= Functions ======= 
