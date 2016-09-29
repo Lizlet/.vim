@@ -33,7 +33,7 @@ endif
 set cursorcolumn
 set cursorline
 " line numbering
-set number
+set relativenumber
 " tab settings, set to 4 spaces, and tabs to spaces.
 set tabstop=4
 set shiftwidth=4
